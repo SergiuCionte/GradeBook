@@ -19,3 +19,6 @@
  
 **4. Dependency Inversion**
     Dupa ce am rezolvat sa functioneze ItemRepository sa ia date de la url specificat si un ItemService care sa proceseze aceste date in modul corespunzator, trebuie sa ne asiguram ca nu mai exista legatura intre controller si repo, ci doar cu service prin interfata ca sa asiguram dependency inversion principle, adica nivelul superior(ItemController) sa nu depinda de nivelul inferior(ItemService) decat prin interfete(IItemService), analog si pentru Service si Repository, conectate doar prin IItemReader .
+
+**Alte modificari**
+S-a adaugat ItemResponse, in models care este un model de deserializare, reprezintă structura JSON-ului returnat de API-ul extern. Link-ul pentru preluarea datelor din URL, il tinem in appsettings.json
